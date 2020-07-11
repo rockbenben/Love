@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Our Love Story</title>
+		<title>Our Love Story - Cynthia & li</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<style type="text/css">
 			@font-face {
@@ -59,6 +59,32 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			function IsPC() {
+				var userAgentInfo = navigator.userAgent;
+				var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+				var flag = true;
+				for (var v = 0; v < Agents.length; v++) {
+					if (userAgentInfo.indexOf(Agents[v]) > 0) {
+						flag = false;
+						break;
+					}
+				}
+				return flag;
+			}
+			//判断移动端后，添加移动端 css
+			var linkNode = document.createElement("link"),scriptNode = document.createElement("script");
+			linkNode.setAttribute("rel","stylesheet");
+			linkNode.setAttribute("type","text/css");
+			scriptNode.setAttribute("type", "text/javascript");
+			var flag = IsPC(); //true为PC端，false为手机端
+			if (flag == true) {
+				linkNode.setAttribute("href","css/default.css")
+			} else {
+				linkNode.setAttribute("href","css/default_mobile.css")
+			}
+			document.head.appendChild(linkNode);
+		</script>
 		<script type="text/javascript">
 			var offsetX = $("#loveHeart").width()/2;
 			var offsetY = $("#loveHeart").height()/2 - 55;
