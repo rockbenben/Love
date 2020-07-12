@@ -19,12 +19,9 @@
 		</script>
 		<link rel="stylesheet" href="css/default_mobile.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/garden.js"></script>
-		<script type="text/javascript" src="js/functions.js"></script>
 	</head>
-	<div style="display:none;"><img src="./thumbnail.png" /></div>
 	<body style="background-color: #ffe;">
+		<img src="./thumbnail.png" style="position:absolute; top:0; left:0;  width: 80%; z-index:-1;opacity: 0; ">
 		<div id="mainDiv" class="container" style="margin-top: 50px;">
 			<div id="content" class="row">
 				<div id="loveHeart" class="col-12">
@@ -42,14 +39,14 @@
 				</div>
 				<div id="code" class="col-12">
 					<span class="comments">/**</span><br />
-					<span class="space" /><span class="comments">* 713 is your birthday,</span><br />
-					<span class="space" /><span class="comments">* so I write some code to celebrate our 7st anniversary.</span><br />
+					<span class="space" /><span class="comments">* Happy birthday!</span><br />
+					<span class="space" /><span class="comments">* I write some code to celebrate our 7st anniversary.</span><br />
 					<span class="space" /><span class="comments">*/</span><br />
 					Boy i = <span class="keyword">new</span> Boy(<span class="string">"li"</span>);<br />
 					Girl u = <span class="keyword">new</span> Girl(<span class="string">"CynthiaHou"</span>);<br />
 					<span class="comments">// Sep 19, 2013, I told you I love you. </span><br />
 					i.love(u);<br />
-					<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
+					<span class="comments">// Luckily, you accepted and became my lover eversince.</span><br />
 					u.accepted();<br />
 					<span class="comments">// Since then, I miss u every day.</span><br />
 					i.miss(u);<br />
@@ -67,6 +64,9 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/garden.js"></script>
+		<script type="text/javascript" src="js/functions.js"></script>
 		<script type="text/javascript">
 			var offsetX = $("#loveHeart").width()/2;
 			var offsetY = $("#loveHeart").height()/2 - 55;
