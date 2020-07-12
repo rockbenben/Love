@@ -3,11 +3,12 @@
 
 ## 显示方式
 
-* index.html 判断手机端或 pc 端，显示 pc.html 或 mobile.html 不同页面。
-* one.html 为单页面，判断手机端或 pc 端，加载不同 css 样式。
+* index.html 默认载入移动页面。如果判断为 pc 端，则跳转显示 index_pc.html 页面。
+* one.html 为单页面，通过判断手机端或 pc 端，加载不同 css 样式。
 
 ## 修改
 
 * bootstrap 框架，可在手机端自调节显示，无需手动放大。
 * 解除移动端字体限制
 * 判断手机端或pc端，显示不同页面
+* 跳转示例
