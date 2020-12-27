@@ -6,47 +6,39 @@
 		<style type="text/css">
 			@font-face {
 				font-family: digit;
-				src: url('https://cdn.jsdelivr.net/gh/rockbenben/confession-page/digital-7_mono.ttf') format("truetype");
+				src: url('digital-7_mono.ttf') format("truetype");
 			}
 		</style>
 		<script type="text/javascript">
-			function IsPC() {
-				var userAgentInfo = navigator.userAgent;
-				var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-				var flag = true;
-				for (var v = 0; v < Agents.length; v++) {
-					if (userAgentInfo.indexOf(Agents[v]) > 0) {
-						flag = false;
-						break;
-					}
-				}
-				return flag;
-			}
-			//判断移动端后，添加移动端 css
-			var linkNode = document.createElement("link"),scriptNode = document.createElement("script");
-			linkNode.setAttribute("rel","stylesheet");
-			linkNode.setAttribute("type","text/css");
-			scriptNode.setAttribute("type", "text/javascript");
-			var flag = IsPC(); //true为PC端，false为手机端
-			if (flag == true) {
-				linkNode.setAttribute("href","https://cdn.jsdelivr.net/gh/rockbenben/confession-page/css/default.css")
-			} else {
-				linkNode.setAttribute("href","https://cdn.jsdelivr.net/gh/rockbenben/confession-page/css/default_mobile.css")
-			}
-			document.head.appendChild(linkNode);
+		if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad|weixin)/i))) {    //跳到手机端
+			//window.location = "mobile.html";
+		} else {
+			//跳到电脑端
+			window.location = "index_pc.html";
+		}
 		</script>
-		
-		<link rel="Shortcut Icon" href="https://cdn.jsdelivr.net/gh/rockbenben/confession-page/favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rockbenben/confession-page/css/bootstrap.min.css" />
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rockbenben/confession-page/js/jquery.min.js"></script>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rockbenben/confession-page/js/garden.js"></script>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rockbenben/confession-page/js/functions.js"></script>
+		<link rel="Shortcut Icon" href="./favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/default_mobile.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
 	</head>
-	<body style="background-color: #ffffee;">
-		<img src="https://cdn.jsdelivr.net/gh/rockbenben/confession-page/thumbnail.png" style="position:absolute; top:0; left:0;  width: 80%; z-index:-1;opacity: 0; ">
+	<body style="background-color: #ffe;">
+		<img src="./thumbnail.png" style="position:absolute; top:0; left:0;  width: 80%; z-index:-1;opacity: 0; ">
 		<div id="mainDiv" class="container" style="margin-top: 50px;">
 			<div id="content" class="row">
-				<div id="code" class="col-auto">
+				<div id="loveHeart" class="col-12">
+					<canvas id="garden"></canvas>
+					<div id="words">
+						<div id="messages">
+							&nbsp;&nbsp;&nbsp;Jingying, I have fallen in love with you for
+							<div id="elapseClock"></div>
+						</div>
+						<div id="loveu">
+							Love u now and forever.<br />
+							<div class="signature">- li</div>
+						</div>
+					</div>
+				</div>
+				<div id="code" class="col-12">
 					<span class="comments">/**</span><br />
 					<span class="space" /><span class="comments">* Happy birthday!</span><br />
 					<span class="space" /><span class="comments">* You say that you want to learn programming,</span><br />
@@ -71,21 +63,11 @@
 					<span class="placeholder" />i.liveHappilyWith(u);<br />
 					}<br />
 				</div>
-				<div id="loveHeart" class="col-auto">
-					<canvas id="garden"></canvas>
-					<div id="words">
-						<div id="messages">
-							&nbsp;&nbsp;&nbsp;Jingying, I have fallen in love with you for
-							<div id="elapseClock"></div>
-						</div>
-						<div id="loveu">
-							Love u now and forever.<br />
-							<div class="signature">- li</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/garden.js"></script>
+		<script type="text/javascript" src="js/functions.js"></script>
 		<script type="text/javascript">
 			var offsetX = $("#loveHeart").width()/2;
 			var offsetY = $("#loveHeart").height()/2 - 55;

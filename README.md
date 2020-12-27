@@ -1,5 +1,7 @@
 表白专用静态页面，已针对手机端自适应优化。
 
+2020.12.27 将 github cdn 部署在 jsDelivr，针对国内加速。本地设置备份在「静态备份」文件夹。
+
 原项目为 hackerzhou 庆祝与 mm 相恋一周年纪念日写的静态页面，PC 端效果相当不错。
 原项目主页：https://github.com/hackerzhou/Love
 
